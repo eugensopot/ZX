@@ -1,23 +1,63 @@
-10 PAPER 7: INK 0: CLS
-20 LET B$=CHR$(143)
-
-30 REM Draw colorful SPARK
-40 INK 2: FOR Y=2 TO 7: FOR X=2 TO 7: IF Y=2 OR Y=4 OR Y=6 THEN PRINT AT Y,X;B$: IF Y=3 AND X=2 OR Y=5 AND X=7 THEN PRINT AT Y,X;B$: NEXT X: NEXT Y
-50 INK 3: FOR Y=2 TO 7: FOR X=8 TO 13: IF Y=2 OR Y=4 THEN PRINT AT Y,X;B$: IF Y=3 AND (X=8 OR X=13) THEN PRINT AT Y,X;B$: IF Y>=5 AND X=8 THEN PRINT AT Y,X;B$: NEXT X: NEXT Y
-60 INK 4: FOR Y=2 TO 7: FOR X=14 TO 19: IF Y=2 OR Y=4 THEN PRINT AT Y,X;B$: IF (X=14 OR X=19) AND Y>=2 THEN PRINT AT Y,X;B$: NEXT X: NEXT Y
-70 INK 5: FOR Y=2 TO 7: FOR X=20 TO 25: IF Y=2 OR Y=4 THEN PRINT AT Y,X;B$: IF Y=3 AND (X=20 OR X=25) THEN PRINT AT Y,X;B$: IF (Y=5 AND X=20) OR (Y=6 AND X=21) OR (Y=7 AND X=22) THEN PRINT AT Y,X;B$: NEXT X: NEXT Y
-80 INK 6: FOR Y=2 TO 7: FOR X=26 TO 31: IF Y>=2 AND Y<=4 AND X=26 THEN PRINT AT Y,X;B$: IF Y=5 AND X=27 OR Y=6 AND X=28 OR Y=7 AND X=29 THEN PRINT AT Y,X;B$: NEXT X: NEXT Y
-
-90 INK 0: PRINT AT 9,4;"Apache Spark for ZX Spectrum"
-100 PRINT AT 11,4;"Version 2.1.0 - ZX BASIC"
-110 PRINT AT 13,4;"READY. Type :help"
-
-120 PRINT AT 15,0;"BASIC>"; INPUT A$
-
-130 PRINT AT 17,0;"ShuffleMapStage"
-140 PRINT AT 18,0;"sql at SqlWrapper.BASIC:20"
-150 PRINT AT 19,0;"failed in 87 s due to"
-160 PRINT AT 20,0;"org.apache.spark.shuffle.FetchFailedException"
-170 PRINT AT 21,0;"allocate 5 byte(s) of direct memory"
-180 PRINT AT 22,0;"memory used: 49151, max: 49152"
-190 GOTO 120
+10 CLS
+20 INK 0
+30 PRINT "Context WebUI available at local": PRINT "Context available as 'sc'": PRINT "Session available as 'spark'.": PRINT "Welcome to"
+40 LET X=0
+50 LET Y=5
+70 INK 2
+80 PRINT AT Y, X; "#####"
+90 PRINT AT Y+1, X; "#    "
+100 PRINT AT Y+2, X; "#    "
+110 PRINT AT Y+3, X; "#####"
+120 PRINT AT Y+4, X; "    #"
+130 PRINT AT Y+5, X; "    #"
+140 PRINT AT Y+6, X; "#####"
+150 LET X=X+6
+170 INK 3
+180 PRINT AT Y, X; "#####"
+190 PRINT AT Y+1, X; "#   #"
+200 PRINT AT Y+2, X; "#   #"
+210 PRINT AT Y+3, X; "#####"
+220 PRINT AT Y+4, X; "#    "
+230 PRINT AT Y+5, X; "#    "
+240 PRINT AT Y+6, X; "#    "
+250 LET X=X+6
+270 INK 4
+280 PRINT AT Y, X; " ### "
+290 PRINT AT Y+1, X; "#   #"
+300 PRINT AT Y+2, X; "#   #"
+310 PRINT AT Y+3, X; "#####"
+320 PRINT AT Y+4, X; "#   #"
+330 PRINT AT Y+5, X; "#   #"
+340 PRINT AT Y+6, X; "#   #"
+350 LET X=X+6
+370 INK 5
+380 PRINT AT Y, X; "#### "
+390 PRINT AT Y+1, X; "#   #"
+400 PRINT AT Y+2, X; "#   #"
+410 PRINT AT Y+3, X; "#### "
+420 PRINT AT Y+4, X; "# #  "
+430 PRINT AT Y+5, X; "#  # "
+440 PRINT AT Y+6, X; "#   #"
+450 LET X=X+6
+470 INK 6
+480 PRINT AT Y, X; "#   #"
+490 PRINT AT Y+1, X; "#  # "
+500 PRINT AT Y+2, X; "# #  "
+510 PRINT AT Y+3, X; "##   "
+520 PRINT AT Y+4, X; "# #  "
+530 PRINT AT Y+5, X; "#  # "
+540 PRINT AT Y+6,X;"#   #"
+550 INK 0
+560 PRINT "Using BASIC (8-Bit Server VM)"
+570 PRINT "Type in expressions" 
+580 PRINT "to have them evaluated."
+590 PRINT "Type :help for more information."
+600 PRINT "BASIC>": INPUT A$
+620 PRINT "ShuffleMapStage "
+630 PRINT "(sql at SqlWrapper.BASIC:20)  ."
+640 PRINT "failed in 87 s due to "
+650 PRINT "org.apache.spark.shuffle."
+660 PRINT "FetchFailedException:failed to "
+670 PRINT "allocate 5 byte(s) of direct "
+680 PRINT "memory (used: 49151, max: 49152)"
+690 GO TO 600
