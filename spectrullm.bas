@@ -1,6 +1,7 @@
 1 CLS
-2 INK 1: PRINT "S"; : INK 2: PRINT "P"; : INK 3: PRINT "E"; : INK 4: PRINT "C"; : INK 5: PRINT "T"; : INK 6: PRINT "R"; : INK 5: PRINT "U"; : INK 4: PRINT "L"; : INK 3: PRINT "L"; : INK 2: PRINT "M"
+2 PRINT "          ";:INK 1: PRINT "S"; : INK 2: PRINT "P"; : INK 3: PRINT "E"; : INK 4: PRINT "C"; : INK 5: PRINT "T"; : INK 6: PRINT "R"; : INK 5: PRINT "U"; : INK 4: PRINT "L"; : INK 3: PRINT "L"; : INK 2: PRINT "M"
 3 INK 0
+4 PRINT ""
 10 LET D$ = "                "
 15 PRINT "Ask Anything"
 20 INPUT A$
@@ -16,7 +17,8 @@
 110 NEXT J
 120 LET B$=B$+" "
 130 NEXT I
-135 LET E$ = D$+A$
+135 LET E$=D$+A$
+136 PRINT ""
 140 PRINT A$
 150 PRINT B$
 160 GOTO 20
